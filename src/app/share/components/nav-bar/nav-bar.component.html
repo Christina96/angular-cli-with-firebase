@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+    <span>Angular - Firebase App</span>
+        <span class="example-fill-remaining-space"></span>
+        <span class="align-center"></span>
+        <span class="example-spacer"></span>
+        <a mat-button *ngIf="login" href="/home"><i class="fa fa-home" aria-hidden="true"></i></a>
+        <button mat-button (click)="logout()"><i class="fa fa-sign-out" style="color:white"></i></button>
+  </mat-toolbar-row>
+</mat-toolbar>

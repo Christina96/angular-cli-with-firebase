@@ -1,0 +1,37 @@
+<div class="container pl-5 pr-5" >
+  <h4>{{contact.name}}  {{contact.surname}}</h4>
+  <hr>
+  <form >
+      <div class="alert alert-success" *ngIf="updateMsg" role="alert">
+          {{updateMsg}}
+      </div>
+      <div class="row">
+          <div class="col-6 form-group">
+              <input matInput class="form-control" placeholder="name"  type="text" [(ngModel)]="contact.name" name="name" required>
+          </div>
+          <div class="col-6 form-group">
+            <input matInput class="form-control" placeholder="surname" type="text"  [(ngModel)]="contact.surname"name="surname"  required>
+          </div>
+      </div>
+      <div class="row">
+      <div class="col-6 form-group">
+        <input matInput class="form-control" placeholder="company" type="text" [(ngModel)]="contact.company" name="company" required>
+      </div>
+      <div class=" col-6 form-group">
+          <input matInput class="form-control" placeholder="phone" type="text" [(ngModel)]="contact.phone" name="phone"required>
+        </div> 
+    </div>
+    <div class="row">
+      <div class="  col-12 form-group">
+        <input matInput class="form-control" placeholder="email" type="email" [(ngModel)]="contact.email" name="email"required>
+       </div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-2">
+            <button type="submit" class="btn btn-primary" (click)="update()"> Update</button>
+        </div>
+       
+      </div>  
+  </form>
+</div>
